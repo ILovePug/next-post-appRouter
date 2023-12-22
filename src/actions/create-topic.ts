@@ -29,6 +29,9 @@ export async function createTopic(
   _: CreateTopicFormState, // the form state to be passed between form and server action
   formData: FormData
 ): Promise<CreateTopicFormState> {
+  // simulate delay
+  await new Promise((resolve) => setTimeout(resolve, 2500));
+
   // run validation
   const result = createTopicSchema.safeParse({
     name: formData.get('name'),
