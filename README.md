@@ -1,4 +1,6 @@
-### Project up
+### Next 14 App router app
+
+### Project set up
 
 ```bash
     # install all packages
