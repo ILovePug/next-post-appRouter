@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import Link from 'next/link';
 import {
   Navbar,
@@ -6,6 +7,7 @@ import {
   NavbarItem,
   Input,
 } from '@nextui-org/react';
+import SearchInput from '@/components/search-input';
 
 import HeaderAuth from '@/components/header-auth';
 export default function Header() {
@@ -17,7 +19,9 @@ export default function Header() {
         </Link>
         <NavbarContent justify="center">
           <NavbarItem>
-            <Input />
+            <Suspense>
+              <SearchInput />
+            </Suspense>
           </NavbarItem>
         </NavbarContent>
         <NavbarContent justify="end">
